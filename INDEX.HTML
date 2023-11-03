@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Calculador de Promedio</title>
+
+    <style>
+        body {
+            background-image: url(./assets/images/logo_cft_estatal.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: rgb(248, 86, 156);
+            padding: 25px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgb(235, 66, 136);
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #result {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculador de Promedio</h1>
+    <div class="row">
+        <div class="col-12" id="Formulario">
+            <form action="">
+                <table id="Tabla">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="studentName">Nombre del Estudiante:</label>
+                            <input type="text" class="form-control" id="studentName" name="studentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Nombre de la Asignatura:</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <!-- Add more form fields for units and notes if needed -->
+                    
+                    </form>
+                    <tr id="Fila1">
+
+                        <th>Nota1</th>
+                        <th>Nota2</th>
+                        <th>Unidad 1</th>
+                    </tr>
+                    <tr>
+                    <th><input class="form-control form-control-sm" type="number" name="N1-U1"></th>
+                    <th><input class="form-control form-control-sm" type="number" name="N2-U1"></th>
+                    <th>(33%)</th>
+                    </tr>
+                    <tr>
+
+                        <th>Nota1</th>
+                        <th>Nota2</th>
+                        <th>Unidad 2</th>
+                    </tr>
+                    <tr>
+                    <th><input class="form-control form-control-sm" type="number" name="N1-U2"></th>
+                    <th><input class="form-control form-control-sm" type="number" name="N2-U2"></th>
+                    <th>(33%)</th>
+                    </tr>
+                    <tr>
+                    <th>Nota1</th>
+                    <th>Nota2</th>
+                    <th>Unidad 3</th>
+                    </tr>
+                    <tr>
+                    <th><input class="form-control form-control-sm" type="number" name="N1-U3"></th>
+                    <th><input class="form-control form-control-sm" type="number" name="N2-U3"></th>
+                    <th>(34%)</th>
+                    </tr>
+                    <td>
+                    <button type="submit" class="btn btn-primary">Calcular Promedio</button>
+                    </td>
+                    <!-- Add more units and notes if needed -->
+                </table>
+            </form>
+            <!-- Add a div to show the results -->
+            <div id="result" class="mt-5"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('form').addEventListener("submit", function(e) {
+            e.preventDefault();
+            // Add your form submission and calculation logic here
+        });
+    </script>
+</body>
+</html>

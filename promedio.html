@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Promedio</title>
+</head>
+<style>
+    body {
+        background-image: url();
+        background-color: rgb(230, 133, 175);
+        padding: 25px;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        background: rgb(207, 94, 141);
+        padding: 25px;
+        border-radius: 20px;
+        margin-top: 50px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    #result {
+        margin-top: 50px;
+    }
+</style>
+<body>
+    <h1>Resultado del Promedio</h1>
+    <div id="resultContainer" class="result-container"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombreES = urlParams.get('nombreES');
+        const asignatura = urlParams.get('asignatura');
+        const promedio = urlParams.get('promedio');
+        const N1_U1 = urlParams.get('N1-U1');
+        const N2_U1 = urlParams.get('N2-U1');
+        const N1_U2 = urlParams.get('N1-U2');
+        const N2_U2 = urlParams.get('N2-U2');
+        const N1_U3 = urlParams.get('N1-U3');
+        const N2_U3 = urlParams.get('N2-U3');
+        const u1 = urlParams.get('u1');
+        const u2 = urlParams.get('u2');
+        const u3 = urlParams.get('u3');
+
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.innerHTML = `
+        <table>
+            <tr>
+                <th>Nombre:</th>
+                <td>${nombreES}</td>
+            </tr>
+            <tr>
+                <th>Asignatura:</th>
+                <td>${asignatura}</td>
+            </tr>
+            <tr>
+                <th>N1-U1:</th>
+                <td>${N1_U1} (12%)</td>
+            </tr>
+            <tr>
+                <th>N2-U1:</th>
+                <td>${N2_U1} (21%)</td>
+            </tr>
+            <tr>
+                <th>N1-U2:</th>
+                <td>${N1_U2} (12%)</td>
+            </tr>
+            <tr>
+                <th>N2-U2:</th>
+                <td>${N2_U2} (21%)</td>
+            </tr>
+            <tr>
+                <th>N1-U3:</th>
+                <td>${N1_U3} (13%)</td>
+            </tr>
+            <tr>
+                <th>N2-U3:</th>
+                <td>${N2_U3} (21%)</td>
+            </tr>
+            <tr>
+                <th>Unidad 1:</th>
+                <td>${u1} (33%)</td>
+            </tr>
+            <tr>
+                <th>Unidad 2:</th>
+                <td>${u2} (33%)</td>
+            </tr>
+            <tr>
+                <th>Unidad 3:</th>
+                <td>${u3} (34%)</td>
+            </tr>
+            <tr>
+                <th>Promedio:</th>
+                <td>${promedio} (100%)</td>
+            </tr>
+        </table>
+        `;
+    </script>
+</body>
+</html>
